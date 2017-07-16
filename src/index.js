@@ -15,8 +15,8 @@ import Greetings from './components/Greetings';
 import SignupPage from './components/signup/SignupPage';
 import LoginPage from './components/login/LoginPage';
 import ProductsPage from './components/products/ProductsPage';
+import ProductItem from './components/products/ProductItem';
 
-// import './index.css'
 
 // if (localStorage.jwtToken) {
 //   setAuthorizationToken(localStorage.jwtToken);
@@ -33,6 +33,7 @@ render(
 				<Route path="/signup" component={SignupPage} />
 				<Route path="/login" component={LoginPage} />
 				<Route path="/products" component={ProductsPage} />
+				<Route path="/products/:id" component={ProductItem} />
     	</div>
     </ConnectedRouter>
   </Provider>,

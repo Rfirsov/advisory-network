@@ -21,9 +21,7 @@ class SignupPage extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signupUser: () => {
-      dispatch(signupUser())
-    }
+    signupUser: () => dispatch(signupUser())
   }
 }
 

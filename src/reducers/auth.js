@@ -5,11 +5,20 @@ const initialState = {};
 export default (state = initialState, action) => {
   switch(action.type) {
     case AUTH_USER:
-      return { ...state, isAuthenticated: true };
+      return { 
+      	...state, 
+      	isAuthenticated: true 
+    	};
     case UNAUTH_USER:
-      return { ...state, isAuthenticated: false };
+      return { 
+      	...state, 
+      	isAuthenticated: false 
+      };
     case AUTH_ERROR:
-      return { ...state, error: action.payload };
+      return { 
+      	...state, 
+      	error: action.payload 
+      };
+  	default: return state;
   }
-    return state;
 }

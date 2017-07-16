@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions/authActions';
 
@@ -10,10 +10,10 @@ class NavigationBar extends React.Component {
   logout(e) {
     e.preventDefault();
     this.props.logoutUser();
+    this.props.history.push('/');
   }
 
   render() {
-    console.log(this.props.auth);
     const { isAuthenticated } = this.props.auth;
     const userLinks = (
       <ul className="nav navbar-nav navbar-right">
@@ -64,4 +64,4 @@ NavigationBar.propTypes = {
   auth: PropTypes.object.isRequired,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavigationBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavigationBar));

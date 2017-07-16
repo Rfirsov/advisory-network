@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class LoginForm extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     this.props.loginUser(this.state);
+    this.props.history.push('/');
   }
 
   onChange(e) {
@@ -60,4 +62,4 @@ LoginForm.contextTypes = {
   router: PropTypes.object.isRequired
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

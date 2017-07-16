@@ -1,6 +1,4 @@
 import axios from 'axios';
-import { push } from 'react-router-redux';
-import history from '../history';
 // import setAuthorizationToken from '../utils/setAuthorizationToken';
 // import jwt from 'jsonwebtoken';
 // import jwtDecode from 'jwt-decode';
