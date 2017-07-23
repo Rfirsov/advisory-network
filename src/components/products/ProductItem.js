@@ -2,8 +2,8 @@ import React from 'react';
 
 const ProductItem = () => {
 	return (
-		<div className="container-fluid">
-		hh
+		<div className="container">
+			hh
 		</div>
 	);
 }

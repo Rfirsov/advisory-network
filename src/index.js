@@ -37,5 +37,5 @@ render(
     	</div>
     </ConnectedRouter>
   </Provider>,
-  document.querySelector('#root')
+  document.getElementById('root')
 )

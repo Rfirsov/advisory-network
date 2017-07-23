@@ -6,25 +6,20 @@ import ProductItem from './ProductItem';
 class ProductsForm extends React.Component {
 	render() {
 		let { productList } = this.props;
-		 const productSelect = (
-		 	<ul className="list-inline">
-		 		{productList.map((product) =>
-		 		<li 
-		 			key={product.id}
-		 			className="btn btn-default"
-		 		>
-		 			<Link to={`${this.props.match.url}/${product.id}`}>
+		const productSelect = productList.map((product) => {
+			return (
+		 		<Link 
+		 			to={`${this.props.match.url}/${product.id}`}
+		 			className="list-group-item"
+		 			key={product.id}>
 		 			{product.title}
-		 			</Link>
-		 		</li> 
-		 		)}
-		 	</ul>
-		 );
+		 		</Link>
+			)
+		});
 		return (
 			<div>
 				{productSelect}
 			</div>
-
 		);
 	}
 }
