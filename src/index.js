@@ -17,12 +17,10 @@ import LoginPage from './components/login/LoginPage';
 import ProductsPage from './components/products/ProductsPage';
 import ProductItem from './components/products/ProductItem';
 
-
 // if (localStorage.jwtToken) {
 //   setAuthorizationToken(localStorage.jwtToken);
 //   store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
 // }
-
 
 render(
   <Provider store={store}>

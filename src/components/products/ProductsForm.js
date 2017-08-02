@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import ProductItem from './ProductItem';
 
 
 class ProductsForm extends React.Component {
